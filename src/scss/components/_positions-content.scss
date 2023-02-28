@@ -1,0 +1,118 @@
+.positions-content {
+  padding: 120px 0;
+
+  &__info {}
+
+  &__left {
+    grid-column: 7 span;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 5 span;
+  }
+}
+
+.position-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 40px;
+  background-color: var(--light-color);
+  border: 1px solid #E5E8ED;
+  border-radius: 4px;
+
+  &__meta {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--text-color);
+  }
+
+  &_city {
+    position: relative;
+    margin-right: 22px;
+    padding-left: 20px;
+    background-image: url('../img/city.svg');
+    background-position: left center;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 11px;
+      top: 50%;
+      right: -10px;
+      transform: translateY(-50%);
+      background-color: currentColor;
+    }
+  }
+
+  &__day {
+    padding-left: 26px;
+    background-image: url('../img/clock.svg');
+    background-position: left center;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--ebony-color);
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 11px 25px;
+    letter-spacing: 0.18px;
+  }
+}
+
+.positions-loocking {
+  width: 389px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    color: var(--ebony-color);
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 47px;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--maco-color);
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    &--sub {
+      padding: 17px 42px;
+    }
+
+    &--cv {
+      padding: 17px 53px;
+    }
+  }
+}

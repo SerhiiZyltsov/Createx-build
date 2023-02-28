@@ -1,0 +1,100 @@
+.benefits {
+  padding-top: 57px;
+  padding-bottom: 154px;
+  background-color: var(--light-color);
+
+  &__list {
+    --benefits-gap: 94px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(var(--benefits-gap) * 2);
+    margin-bottom: 26px;
+  }
+
+  &__item {
+    position: relative;
+    text-align: center;
+    padding-top: 72px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 48px 48px;
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: calc(-1 * var(--benefits-gap));
+        width: 1px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../img/divider.svg");
+      }
+    }
+
+    &--quality {
+      background-image: url("../img/benefits/training.svg");
+    }
+
+    &--safety {
+      background-image: url("../img/benefits/growth.svg");
+    }
+
+    &--comfort {
+      background-image: url("../img/benefits/salary.svg");
+    }
+
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--ebony-color);
+  }
+
+  &__descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #787A80;
+  }
+
+}
+
+.know-form {
+  position: relative;
+  top: 96px;
+  padding: 43px 60px;
+  background: var(--light-color);
+  box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 4px 4px -4px rgba(30, 33, 44, 0.03);
+  border-radius: 4px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 35px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--ebony-color);
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__field {
+    margin-right: 24px;
+  }
+
+  &__btn {
+    padding: 14px 29px;
+  }
+}

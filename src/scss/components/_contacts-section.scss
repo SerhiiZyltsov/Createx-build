@@ -1,0 +1,56 @@
+.contacts-section {
+  padding: 80px 0 76px;
+  background-image: url('../img/contacts-section-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--ebony-color);
+
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__form {
+    background-color: var(--light-color);
+  }
+
+}
+
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 48px 40px;
+  max-width: 495px;
+  border: 1px solid #E5E8ED;
+  box-shadow: 0 60px 80px -20px rgba(30, 33, 44, 0.16), 0 26px 24px -10px rgba(30, 33, 44, 0.1), 0 12px 10px -6px rgba(30, 33, 44, 0.08), 0 4px 4px -4px rgba(30, 33, 44, 0.05);
+  border-radius: 4px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 24px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--ebony-color);
+
+  }
+
+  &__field {
+    margin-bottom: 21px;
+  }
+
+  &__checkbox {
+    margin-bottom: 18px;
+  }
+
+  &__btn {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+
+}

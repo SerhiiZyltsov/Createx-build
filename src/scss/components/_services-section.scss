@@ -1,0 +1,109 @@
+.services-section {
+  padding-top: 220px;
+  padding-bottom: 82px;
+  background-image: url("../img/services-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__list {
+    margin-bottom: 80px;
+  }
+
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--grid-gap);
+
+}
+
+.services-item {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  padding-top: 88px;
+  padding-bottom: 90px;
+  border: 1px solid #e5e8ed;
+  border-radius: 4px;
+  box-shadow: 0p 80px 80px -20px rgba(154, 156, 165, 0.08), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 4px 4px -4px rgba(30, 33, 44, 0.03);
+  background-color: var(--light-color);
+
+
+  &:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    background-image: url("../img/service-1.jpg");
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    background-color: rgba(30, 33, 44, 0.6);
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__content {
+    @include flex-column-center;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 22px;
+    object-fit: cover;
+    fill: var(--accent-color);
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--ebony-color);
+  }
+
+  &:hover {
+
+    &::before {
+      opacity: 1;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+
+    .services-item__icon {
+      fill: var(--light-color);
+    }
+
+    .services-item__title {
+      color: var(--light-color);
+    }
+
+  }
+}

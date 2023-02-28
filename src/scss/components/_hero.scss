@@ -1,0 +1,165 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--gray-color);
+
+  &__btns {
+    .btn {
+      @include mr(18px);
+    }
+  }
+
+
+  .swiper-pagination {
+    counter-reset: section;
+    width: auto;
+    bottom: 50px;
+    line-height: 100%;
+    padding-left: max(15px, 80px, (100% - var(--content-width)) / 2);
+    z-index: 2;
+  }
+
+  .swiper-pagination-bullet {
+    position: relative;
+    width: 178px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 0;
+
+    &:before {
+      position: absolute;
+      counter-increment: section;
+      content: "0" counters(section, ".");
+      bottom: 12px;
+      left: 0;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 150%;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  &__slide {
+    overflow: hidden;
+  }
+
+  &__bg {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    inset: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.45);
+
+    }
+
+  }
+
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-text {
+  padding: 160px 0;
+  // padding-top: 220px;
+  // padding-bottom: 352px;
+  width: 100%;
+  background-color: var(--gray-color);
+  padding-left: max(15px, 70px, calc((100% - var(--content-width))/2));
+
+
+  &__content {
+    max-width: 590px;
+  }
+
+  &__btns {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+      display: none;
+    }
+
+    .hero-text-button-prev,
+    .hero-text-button-next {
+      width: 48px;
+      height: 48px;
+      background-color: var(--light-color);
+      opacity: 0.5;
+      border-radius: 100%;
+      transition: opacity 0.3s ease-in-out;
+      color: var(--maco-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .hero-text-button-prev {}
+
+      .hero-text-button-next {
+        right: 15px;
+      }
+
+      svg {
+        width: 18px;
+        height: 11px;
+        fill: currentColor;
+        transition: fill 0.3s ease-in-out;
+      }
+
+      &:focus,
+      &:focus-visible {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 2px;
+      }
+
+      &:hover {
+
+        opacity: 1;
+
+        svg {
+          color: var(--accent-color);
+        }
+
+      }
+
+      &:active {
+        opacity: 1;
+
+        svg {
+          color: var(--active-color);
+        }
+
+      }
+
+    }
+  }
+
+}

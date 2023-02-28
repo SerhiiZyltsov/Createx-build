@@ -1,0 +1,38 @@
+.nav {
+  margin-left: -112px;
+
+  &__list {
+    @include flex-v-center;
+  }
+
+  &__item {
+    @include mr(40px);
+  }
+
+
+  &__link {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--gray-color);
+    transition: color 0.4s linear;
+
+    &--accent {
+      color: var(--accent-color);
+    }
+
+
+    &:focus {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--accent-color);
+    }
+
+    &:active {
+      color: var(--active-color);
+    }
+  }
+
+}

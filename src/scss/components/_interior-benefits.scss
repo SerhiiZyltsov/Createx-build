@@ -1,0 +1,84 @@
+.interior-benefits {
+  position: relative;
+  padding: 80px 0 100px;
+  background-color: var(--ebony-color);
+
+  &__title {
+    color: var(--light-color);
+  }
+
+  &__list {
+    --mission-gap: 94px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(var(--mission-gap) * 2);
+    margin-bottom: 26px;
+  }
+
+  &__item {
+    position: relative;
+    text-align: center;
+    padding-top: 72px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 48px 48px;
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: calc(-1 * var(--mission-gap));
+        width: 1px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../img/divider.svg");
+      }
+    }
+
+    &--terms {
+      background-image: url("../img/benefits-1.svg");
+    }
+
+    &--qualified {
+      background-image: url("../img/benefits-2.svg");
+    }
+
+    &--control {
+      background-image: url("../img/benefits-3.svg");
+    }
+
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--light-color);
+  }
+
+  &__descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+  }
+
+  &__centered {
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__btn {
+    max-width: 390px;
+    width: 100%;
+  }
+
+}

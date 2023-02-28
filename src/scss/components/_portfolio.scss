@@ -1,0 +1,139 @@
+.portfolio {
+  position: relative;
+  padding-bottom: 96px;
+}
+
+.portfolio-tabs-nav {
+  --gap: 20px;
+  @include flex-v-center;
+  margin-bottom: 61px;
+  transform: translateY(-60px);
+
+  &__item {
+
+    width: calc(100% - (var(--gap) * 4) / 5);
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+
+  }
+
+  &__btn {
+    @include flex-column-center;
+    width: 100%;
+    min-height: 154px;
+    padding: 15px;
+    background-color: var(--light-color);
+    box-shadow:
+      0 80px 80px -20px rgba(154, 156, 165, 0.08),
+      0 30px 24px -10px rgba(154, 156, 165, 0.05),
+      0 12px 10px -6px rgba(154, 156, 165, 0.04),
+      0 4px 4px -4px rgba(30, 33, 44, 0.03);
+    border-radius: 4px;
+    color: var(--accent-color);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+    &--active {
+      color: var(--light-color);
+      background-color: var(--accent-color);
+      pointer-events: none;
+
+      .portfolio-tabs-nav__text {
+        color: var(--light-color);
+      }
+
+      .portfolio-tabs-nav__icon {
+        fill: var(--light-color);
+      }
+    }
+
+    &:focus {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+
+      .portfolio-tabs-nav__text {
+        color: var(--ebony-color);
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    object-fit: cover;
+    fill: var(--accent-color);
+    pointer-events: none;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--text-color);
+    pointer-events: none;
+    transition: color 0.4s linear;
+  }
+}
+
+.porfolio-tabs {
+
+  &__item {
+    display: none;
+    grid-column: 4 span;
+
+    &:nth-child(n+10) {
+      display: none;
+    }
+
+    &--visible {
+      display: block;
+    }
+
+    &--visible-more {
+      display: block !important;
+    }
+  }
+}
+
+.porfolio-more {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 66px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--maco-color);
+  transition: color 0.4s ease-in;
+
+  svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    color: inherit;
+    fill: currentColor;
+  }
+
+  &:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    color: var(--accent-color);
+  }
+
+  &:active {
+    color: var(--active-color);
+  }
+
+
+}

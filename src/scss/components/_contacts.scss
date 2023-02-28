@@ -1,0 +1,154 @@
+.contacts {
+  padding-bottom: 120px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__image {
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+}
+
+
+.form-contacts {
+  width: 600px;
+
+  &__line {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  &__field {
+    width: 47.5%;
+  }
+
+  &__radio {
+    &:not(:last-child) {
+      margin-right: 22px;
+    }
+  }
+
+  &__field--big {
+    width: 100%;
+    margin-bottom: 43px;
+
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__checkbox {
+    max-width: 315px;
+
+    .custom-checkbox__text {
+      font-size: 16px;
+      line-height: 160%;
+      color: #424551;
+
+      &::before {
+        top: 4px;
+      }
+
+      &::after {
+        top: 4px;
+      }
+    }
+  }
+
+
+  .field-form__caption {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #424551;
+  }
+
+  .field-form__input {
+    height: 52px;
+    font-size: 16px;
+    line-height: 160%;
+    color: #9A9CA5;
+  }
+
+
+  &__fields {
+    border: none;
+    padding: 0;
+    width: 47.5%;
+
+    .field-form__caption {
+      margin-bottom: 20px;
+    }
+
+  }
+
+  .choices {
+    width: 100%;
+  }
+
+
+  .is-focused {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+  }
+
+
+  .choices__inner {
+    height: 52px;
+    margin: 0;
+    padding: 0;
+    background: #F4F5F7;
+    border: 1px solid #D7DADD;
+    border-radius: 4px;
+  }
+
+  .choices[data-type*=select-one] .choices__inner {
+    padding-bottom: 0;
+  }
+
+  .choices__placeholder {
+    opacity: 1;
+    font-size: 16px;
+    line-height: 160%;
+    color: #9A9CA5;
+
+  }
+
+  .choices__list--single {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 15px;
+
+  }
+
+  .choices__list--dropdown .choices__item--selectable::after {
+    display: none;
+  }
+
+  .choices[data-type*=select-one]::after {
+    border: none;
+    right: 16.5px;
+    width: 20px;
+    height: 20px;
+    margin-top: 0 !important;
+    background-image: url('../img/down-chevron.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: translateY(-50%);
+  }
+
+}
+
+.form-contacts .field-form__input--big {
+  height: 124px;
+
+}

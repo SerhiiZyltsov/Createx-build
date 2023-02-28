@@ -1,0 +1,88 @@
+.comment {
+  display: flex;
+
+  &__right {
+    width: 630px;
+  }
+
+  &__left {
+    width: calc(100% - 630px);
+    padding-right: 30px;
+  }
+
+
+  &__author {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--ebony-color);
+
+  }
+
+  &__time {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--text-color);
+  }
+
+
+  &__body {
+    margin-bottom: 17px;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--maco-color);
+
+    a {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 160%;
+      color: var(--accent-color);
+
+    }
+
+    * {
+      margin: 0;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--maco-color);
+    transition: color 0.4s ease-in-out;
+
+    svg {
+      position: relative;
+      top: 1px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      object-fit: cover;
+      fill: currentColor;
+    }
+
+    &:focus {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--accent-color);
+    }
+
+    &:active {
+      color: var(--active-color);
+    }
+  }
+}

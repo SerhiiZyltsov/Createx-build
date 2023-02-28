@@ -1,0 +1,22 @@
+.clients {
+  padding: 133px 0 110px;
+  background-color: var(--athens-color);
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 102px;
+  }
+
+  &__link {
+    &:focus {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
+    }
+  }
+
+}

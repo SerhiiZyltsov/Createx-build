@@ -1,0 +1,27 @@
+.header {
+  padding-top: 23px;
+  padding-bottom: 21px;
+
+  &__container {
+    @include flex-all-sb;
+  }
+
+  &--main {
+    background-color: var(--light-color);
+  }
+
+  &--secondary {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+}
+
+.logo {
+  &:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+  }
+}

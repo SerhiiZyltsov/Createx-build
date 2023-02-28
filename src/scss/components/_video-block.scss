@@ -1,0 +1,94 @@
+.video-block {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  height: 500px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(30, 33, 44, 0.6);
+    z-index: 3;
+  }
+
+  &__content {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__play {
+    @include flex-all-center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: var(--accent-color);
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    transition: background-color 0.3s ease-in-out;
+
+    svg {
+      width: 26px;
+      height: 26px;
+      padding-left: 5px;
+      fill: var(--light-color);
+    }
+
+    &:focus {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
+    }
+
+
+    &:hover {
+      background-color: var(--active-color);
+    }
+
+    &:active {
+      background-color: var(--active-color);
+    }
+  }
+
+  &__muted {
+    @include flex-all-center;
+    position: absolute;
+    left: 32px;
+    bottom: 32px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.12);
+    z-index: 10;
+    transition: background-color 0.3s ease-in-out;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+
+    }
+
+    &:focus {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
+    }
+
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    &:active {
+      background-color: rgba(255, 255, 255, 4);
+    }
+
+  }
+}

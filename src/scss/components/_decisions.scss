@@ -1,0 +1,46 @@
+.decisions {
+  padding-top: 82px;
+  background-color: var(--athens-color);
+
+  &__left {
+    position: relative;
+    grid-column: 5 span;
+    margin-bottom: -68px;
+  }
+
+  &__right {
+    grid-column: 7 span;
+    padding-left: 100px;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__list {}
+
+  &__item {
+    position: relative;
+    padding-left: 38px;
+    font-size: 16px;
+    line-height: 160%;
+    color: #424551;
+
+    &:not(:last-child) {
+      margin-bottom: 21px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 1px;
+      left: 2px;
+      width: 20px;
+      height: 20px;
+      background-image: url('../img/decisions-check.svg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}

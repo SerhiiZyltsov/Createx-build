@@ -1,0 +1,56 @@
+.header-contacts {
+  @include flex-v-center;
+
+  &__link {
+    @include flex-column-start;
+    background-size: 40px 40px;
+    @include mr(40px);
+  }
+}
+
+.contacts-link {
+  padding-left: 52px;
+  background-repeat: no-repeat;
+  background-position: left center;
+
+
+  &__caption {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  &__value {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--dark-color);
+    transition: color 0.3s linear;
+  }
+
+  &:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    .contacts-link__value {
+      color: var(--accent-color);
+    }
+  }
+
+  &:active {
+    .contacts-link__value {
+      color: var(--active-color);
+    }
+  }
+
+  &--call {
+    background-image: url("../img/phone.svg");
+  }
+
+  &--email {
+    background-image: url("../img/chat.svg");
+  }
+}

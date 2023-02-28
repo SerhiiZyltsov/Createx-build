@@ -1,0 +1,29 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Ubuntu", sans-serif;
+  --content-width: 1230px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --dark-color: #000;
+  --light-color: #fff;
+  --accent-color: #FF5A30;
+  --ebony-color: #1E212C;
+  --maco-color: #424551;
+  --text-color: #787A80;
+  --athens-color: #f4f5f7;
+  --active-color: #FC3300;
+
+  // sizes
+
+  --grid-gap: 30px;
+
+  --main-shadow:
+    0 80px 80px -20px rgba(154, 156, 165, 0.08),
+    0 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0 4px 4px -4px rgba(30, 33, 44, 0.03);
+}

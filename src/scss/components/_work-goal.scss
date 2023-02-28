@@ -1,0 +1,63 @@
+.project-goal {
+  padding-top: 20px;
+  padding-bottom: 120px;
+
+  &__left {
+    grid-column: 6 span;
+  }
+
+  &__title {
+    margin-bottom: 42px;
+    padding-top: 32px;
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: 18px;
+    line-height: 150%;
+
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__right {
+    grid-column: 6 span;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.project-info {
+  width: 495px;
+  padding: 34px 56px;
+  padding-right: 40px;
+  background-color: var(--light-color);
+  box-shadow: var(--main-shadow);
+  border-radius: 4px;
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__category {
+    width: 130px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--ebony-color);
+    text-transform: uppercase;
+  }
+
+  &__value {
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--text-color);
+    ;
+  }
+}
