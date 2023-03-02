@@ -11,8 +11,18 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(30, 33, 44, 0.6);
+    background-color: rgba(30, 33, 44, 0.7);
     z-index: 3;
+    transition: opacity 0.4s linear, visibility 0.4s linear;
+  }
+
+  &--played {
+
+    &:before {
+      opacity: 0;
+      visibility: hidden;
+
+    }
   }
 
   &__content {
@@ -33,7 +43,7 @@
     background-color: var(--accent-color);
     transform: translate(-50%, -50%);
     z-index: 10;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, opacity 0.4s linear, visibility 0.4s linear;
 
     svg {
       width: 26px;
@@ -55,40 +65,12 @@
     &:active {
       background-color: var(--active-color);
     }
+
+
+    &--played {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 
-  &__muted {
-    @include flex-all-center;
-    position: absolute;
-    left: 32px;
-    bottom: 32px;
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    background-color: rgba(255, 255, 255, 0.12);
-    z-index: 10;
-    transition: background-color 0.3s ease-in-out;
-
-    svg {
-      width: 20px;
-      height: 20px;
-      fill: #fff;
-
-    }
-
-    &:focus {
-      outline: 2px solid var(--accent-color);
-      outline-offset: 2px;
-    }
-
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.4);
-    }
-
-    &:active {
-      background-color: rgba(255, 255, 255, 4);
-    }
-
-  }
 }

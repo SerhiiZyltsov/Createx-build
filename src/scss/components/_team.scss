@@ -20,17 +20,17 @@
     margin-bottom: 10px;
     overflow: hidden;
     border-radius: 4px;
+    font-size: 0;
 
     &:hover {
       .team__social {
-        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
       }
     }
   }
 
-  &__image {
-    display: block;
-  }
+
 
   &__name {
     margin-bottom: 4px;
@@ -56,8 +56,9 @@
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 90, 48, 0.7);
-    transition: transform 0.4s ease-in-out;
-    transform: translateY(100px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s linear, visibility 0.4s linear;
   }
 
   &__link {

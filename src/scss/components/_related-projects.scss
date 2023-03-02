@@ -46,10 +46,12 @@
 
   &__content {
     @include flex-column-center;
+    margin-bottom: -74px;
     padding: 0 10px;
     padding-top: 16px;
     padding-bottom: 23px;
     background-color: var(--light-color);
+    transition: margin-bottom 0.4s linear;
 
   }
 
@@ -70,7 +72,7 @@
   }
 
   &__btn {
-    display: none;
+    display: block;
     margin-top: 24px;
     padding: 13px 31px;
     border: 1px solid currentColor;
@@ -80,6 +82,7 @@
     letter-spacing: 0.5px;
     text-transform: uppercase;
     color: var(--accent-color);
+    will-change: margin;
   }
 
   &:focus {
@@ -88,7 +91,10 @@
   }
 
   &:hover {
-    transform: translateY(-5px);
+
+    .portfolio-item__content {
+      margin-bottom: 0;
+    }
   }
 
 }

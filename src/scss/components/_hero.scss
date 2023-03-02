@@ -22,12 +22,15 @@
 
   .swiper-pagination-bullet {
     position: relative;
+    display: inline-block;
     width: 178px;
     height: 3px;
-    background-color: #fff;
+    background: #fff;
     border-radius: 0;
+    opacity: 0.3;
 
-    &:before {
+
+    &:after {
       position: absolute;
       counter-increment: section;
       content: "0" counters(section, ".");
@@ -38,7 +41,9 @@
       line-height: 150%;
       color: #FFFFFF;
     }
+
   }
+
 }
 
 .hero-img {
