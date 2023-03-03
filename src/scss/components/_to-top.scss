@@ -1,0 +1,50 @@
+.to-top {
+  position: fixed;
+  right: max(15px, (100% - 1230px) / 2);
+  bottom: 80px;
+  display: flex;
+  align-items: flex-end;
+  color: var(--light-color);
+  z-index: 10;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s linear;
+
+  &__text {
+    font-size: 14px;
+    line-height: 150%;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 16px;
+    background: #FF5A30;
+    border-radius: 4px;
+    transition: background-color 0.4s linear;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+
+    svg {
+      width: 16px;
+      height: 16px;
+      object-fit: cover;
+      fill: currentColor;
+    }
+
+    &:hover {
+      background-color: var(--active-color);
+    }
+  }
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

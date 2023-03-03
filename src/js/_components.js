@@ -5,3 +5,4 @@ import './components/portfolio-tabs-template';
 import './components/work-slider';
 import './components/selects';
 import './components/video';
+import './components/scroll-top';
